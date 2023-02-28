@@ -1,4 +1,5 @@
 ## Exercises
+
 ### What is the difference between JavaScript and ECMAScript?
 
 #### Ans: ECMAScript is a Standard for scripting languages while JavaScript is a language based on ECMAScript.
