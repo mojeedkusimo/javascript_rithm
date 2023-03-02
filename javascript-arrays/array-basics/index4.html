@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Exercise for Array Basics</h1>
+    <script>
+        let favoriteFoods = ['amala', 'rice', 'yam'];
+
+        let secondElement = favoriteFoods[1];
+        console.log(secondElement);
+
+        favoriteFoods[favoriteFoods.length - 1] = 'beans';
+        console.log(favoriteFoods);
+
+        let formerFavoriteFood = favoriteFoods.shift();
+        console.log(formerFavoriteFood);
+
+        favoriteFoods.push('agbado');
+        console.log(favoriteFoods);
+
+        favoriteFoods.unshift('semovita');
+        console.log(favoriteFoods);
+
+        // What happens when popping an empty array
+        let emptyArr = [];
+        emptyArr.pop();
+
+        // ### i. [2, 3, 4, 5] -> [2, 4, 5]
+        // ### ii. ["alpha", "gamma", "delta"] -> ["alpha", "beta", "gamma", "delta"]
+        // ### iii. [10,-10,-5,-3,2,1] -> [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+
+        let example1 = [2, 3, 4, 5];
+        example1.splice(1,1);
+        console.log(example1);
+
+        let example2 = ["alpha", "gamma", "delta"];
+        example2.splice(1,0,'beta');
+        console.log(example2);
+
+        let example3 = [10,-10,-5,-3,2,1];
+        example3.splice(1,3,9, 8, 7, 6, 5, 4, 3);
+        console.log(example3);
+
+    </script>
+</body>
+</html>
