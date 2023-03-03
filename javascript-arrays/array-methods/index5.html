@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Exercise for Array Methods</h1>
+    <script>
+        let arr = [];
+        arr.push("Mojeed");
+        console.log(arr);
+
+        arr.push("Kusimo");
+        console.log(arr);
+
+        arr.unshift("blue");
+        console.log(arr);
+
+        arr.shift();
+        console.log(arr);
+
+        let arr2 = [];
+
+        arr2.push(19);
+        console.log(arr2);
+
+        arr2.push("JavaScript");
+
+        let indexOf42 = arr2.indexOf(42);
+        console.log(indexOf42);
+
+        let combinedArr = arr.concat(arr2);
+        console.log(combinedArr);
+
+        let arrNew = ["JavaScript", "Python", "Ruby", "Java"];
+
+        let arrNewPort1 = arrNew.slice(1,2);
+
+        console.log(arrNewPort1);
+
+        let arrNewPort2 = arrNew.concat(["Hashkell","Clojure"]);
+        console.log(arrNewPort2);
+
+        let arrNewPort3 = arrNew.join(", ");
+        console.log(arrNewPort3);
+
+    </script>
+</body>
+</html>
