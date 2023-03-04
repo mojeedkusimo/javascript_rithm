@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Exercises for JavaScript Objects</h1>
+    <script>
+        let programming = {
+            languages: ["JavaScript", "Python", "Ruby"],
+            isChallenging: true,
+            isRewarding: true,
+            difficulty: 8,
+            jokes: "http://stackoverflow.com/questions/234075/what-is-your-best-programmer-joke"
+        };
+
+        programming.languages.push("Go");
+        console.log(programming);
+
+        programming.difficulty = 7;
+        console.log(programming);
+
+        delete programming.jokes;
+        console.log(programming);
+
+        programming.isFun = true;
+        console.log(programming);
+
+        for (let i = 0; i < programming.languages.length; i++) {
+            console.log(programming.languages[i]);
+        };
+
+        for (let key in programming) {
+            console.log(key);
+        };
+
+        for (let key in programming) {
+            console.log(programming[key]);
+        };
+    </script>
+</body>
+
+</html>
