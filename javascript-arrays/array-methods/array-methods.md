@@ -86,4 +86,7 @@
 ### Ans: Yes
 
 ### x. Do I know the difference between includes and indexOf?
+### Ans: Yes --> indexOf returns the index of an element if found in an array, and -1 if not found whereas includes returns true if an element is found in the array, and false if not found.
+
 ### xi. Do I know why [] === [] always returns false?
+### Yes. --> Because, they are not reference of each other and they are independent values/arrays.
