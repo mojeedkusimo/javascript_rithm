@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Exercise for JavaScript Array</h1>
+    <script>
+        let people = ["Greg", "Mary", "Devon", "James"];
+        let peopleNew = people.slice();
+
+        for (let i = 0; i < people.length; i++) {
+            console.log(people[i]);
+        }
+
+        let removeGreg = people.shift();
+        console.log(removeGreg);
+        console.log(people);
+
+        let removeJames = people.pop();
+        console.log(removeJames);
+        console.log(people);
+
+        let addMatt = people.unshift("Matt");
+        console.log(addMatt);
+        console.log(people);
+
+        let addMe = people.push("Mojeed");
+        console.log(addMe);
+        console.log(people);
+
+        for (let i = 0; i < people.length; i++) {
+            console.log(people[i]);
+
+            if (people[i] == "Mary") {
+                break;
+            }
+        }
+
+        let peopleCopy = people.slice(2,);
+        console.log(peopleCopy);
+
+        let positonOfMary = people.indexOf("Mary");
+        console.log(positonOfMary);
+
+        let positonOfFoo = people.indexOf("Foo");
+        console.log(positonOfFoo);
+
+        peopleNew.splice(2,1,"Elizabeth", "Artie");
+        console.log(peopleNew);
+
+        let withBob = people.concat("Bob");
+        console.log(withBob);
+
+    </script>
+</body>
+</html>
