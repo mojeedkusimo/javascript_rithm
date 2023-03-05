@@ -51,6 +51,7 @@ returnFirstOddNumber();
 
 // 1
 ```
+### Ans: See function-basics.html, line 47
 
 ### Create a function called returnFirstEvenNumber which iterates over the numbers array and returns the first even number it finds
 
@@ -59,6 +60,7 @@ returnFirstEvenNumber();
 
 // 2
 ```
+### Ans: See function-basics.html, line 58
 
 ### Create a function called returnFirstHalf which returns the first half of the numbers array
 
@@ -67,6 +69,7 @@ returnFirstHalf();
 
 // [1,2,3,4,5]
 ```
+### Ans: See function-basics.html, line 69
 
 ### Create a function called returnSecondHalf which returns the second half of the numbers array
 
@@ -74,3 +77,5 @@ returnFirstHalf();
 returnSecondHalf();
 
 // [6,7,8,9,10]
+```
+### Ans: See function-basics.html, line 78

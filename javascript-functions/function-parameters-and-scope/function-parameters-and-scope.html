@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Exercise for Function Parameters and Scope</h1>
+    <script>
+        function add(a,b) {
+            console.log(a + b);
+            return a + b;
+        };
+        add(2,2);
+
+        function subtract(a,b) {
+            console.log(a - b);
+            return a - b;
+        };
+        subtract(2,2);
+
+        function multiply(a,b) {
+            console.log(a * b);
+            return a * b;
+        };
+        multiply(2,2);
+
+        function divide(a,b) {
+            console.log(a / b);
+            return a / b;
+        };
+        divide(2,2);
+
+        function sayHello(name) {
+            if (name == "Mojeed") {
+                return "Hello Boss";
+            }
+            return `Hello ${name}`;
+        };
+        sayHello("Mojeed");
+
+        function average(array) {
+            let sum = 0;
+            for (let i = 0; i < array.length; i++) {
+                sum = sum + array[i];
+            };
+            console.log(sum/array.length);
+            return sum/array.length;
+        };
+        average([1,2,3,4,5]);
+        average([1,2,3,4,5,6]);
+        average([10,20]);
+
+        function createStudent(firstName, lastName) {
+            let fullName = {
+                firstName,
+                lastName
+            };
+            console.log(fullName);
+            return fullName;
+        };
+        createStudent("Mojeed","Kusimo");
+        let tim = createStudent("Tim", "Garcia");
+        let matt = createStudent("Matt", "Lane");
+        let elie = createStudent("Elie", "Schoppik");
+
+        let students = [tim, matt, elie];
+        console.log(students);
+
+        function findStudentByFirstName(firstName) {
+            for(let i = 0; i < students.length; i++) {
+                if (students[i].firstName.toLowerCase() == firstName.toLowerCase()) {
+                    console.log(true);
+                    return true;
+                }
+                console.log(false);
+                return false;
+            }
+        };
+        findStudentByFirstName('elie'); // true
+        findStudentByFirstName('Elie'); // true
+        findStudentByFirstName('Janey'); // false
+        findStudentByFirstName('Janey'); // false
+        findStudentByFirstName('TIM'); // true
+        findStudentByFirstName('MMMaaaTTTtttTTT'); // false
+    </script>
+</body>
+</html>
