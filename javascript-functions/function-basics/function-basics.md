@@ -14,6 +14,7 @@ myName(); // if your full name was Elie Schoppik this function would return "Eli
 ```javascript
 randomFood(); // either returns "pizza" or "ice cream"
 ```
+### Ans: See function-basics.html, line 17
 
 ### Create a variable called numbers which is an array that contains the numbers 1 through 10.
 
@@ -28,6 +29,7 @@ displayOddNumbers();
 // 7
 // 9
 ```
+### Ans: See function-basics.html, line 25
 
 ### Write a function called displayEvenNumbers which iterates over the numbers array and console.logs out all of the numbers that are even. Here is what that might look like:
 
@@ -40,6 +42,7 @@ displayEvenNumbers();
 // 8
 // 10
 ```
+### Ans: See function-basics.html, line 37
 
 ### Create a function called returnFirstOddNumber which iterates over the numbers array and returns the first odd number it finds
 

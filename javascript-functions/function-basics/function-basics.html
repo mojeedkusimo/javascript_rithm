@@ -18,9 +18,72 @@
 
         function randomFood() {
             let randomIndex = Math.round(Math.random());
-            console.log(randomIndex);
+            console.log(favoriteFoods[randomIndex]);
         };
         randomFood();
+
+        let numbers = [1,2,3,4,5,6,7,8,9,10];
+
+        function displayOddNumbers() {
+            for (let i = 0; i < numbers.length; i++) {
+                if (numbers[i] % 2 != 0) {
+                    console.log(numbers[i]);
+                }
+            }
+        }
+
+        displayOddNumbers();
+
+        function displayEvenNumbers() {
+            for (let i = 0; i < numbers.length; i++) {
+                if (numbers[i] % 2 == 0) {
+                    console.log(numbers[i]);
+                };
+            };
+        };
+
+        displayEvenNumbers();
+
+        function returnFirstOddNumber() {
+            for (let i = 0; i < numbers.length; i++) {
+                if (numbers[i] % 2 != 0) {
+                    console.log(numbers[i]);
+                    break;
+                };
+            };
+        };
+
+        returnFirstOddNumber();
+
+        function returnFirstEvenNumber() {
+            for (let i = 0; i < numbers.length; i++) {
+                if (numbers[i] % 2 == 0) {
+                    console.log(numbers[i]);
+                    break;
+                };
+            };
+        };
+
+        returnFirstEvenNumber();
+
+        function returnFirstHalf() {
+            for (let i = 0; i < numbers.length / 2; i++) {
+                    console.log(numbers[i]);
+            };
+            //    return numbers.slice(0,numbers.length/2);
+        };
+
+        returnFirstHalf();
+
+        function returnSecondHalf() {
+            for (let i = numbers.length / 2; i < numbers.length; i++) {
+                    console.log(numbers[i]);
+            };
+            //    return numbers.slice(numbers.length/2);
+
+        };
+
+        returnSecondHalf();
     </script>
 </body>
 </html>
