@@ -72,6 +72,7 @@ findStudentByFirstName('Janey') // false
 findStudentByFirstName('TIM') // true
 findStudentByFirstName('MMMaaaTTTtttTTT') // false
 ```
+### Ans: See function-parameters-and-scope.html, line 74
 
 ### Write a function called extractEveryThird which accepts an array as a parameter. The function should iterate over the array and return a new array with every 3rd element in the array passed to the function.
 
