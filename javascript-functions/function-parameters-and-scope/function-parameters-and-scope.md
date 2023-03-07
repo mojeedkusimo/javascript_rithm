@@ -83,6 +83,8 @@ extractEveryThird(["a","b","c","d"]); // ["c"]
 extractEveryThird(["first value", "second value", "third value"]); // ["third value"]
 ```
 
+### Ans: See function-parameters-and-scope.html, line 92
+
 ### Write a function called countEvensAndOdds which accepts an array as a parameter. This function should return an object with the count of even numbers and the count of odd numbers. The object returned should have the keys oddCount and evenCount.
 
 ```javascript
@@ -101,6 +103,7 @@ countEvensAndOdds([1,2,3,4,5,6,7]);
  }
 */
 ```
+### Ans: See function-parameters-and-scope.html, line 112
 
 ### In the following example, what will be printed in the console? Make sure you first try read this code before pasting it into the console :)
 
@@ -123,6 +126,9 @@ function trickyScopePractice() {
 console.log(tricky);
 ```
 
+### Ans: "Hello from global";
+### Ans: "Hello from global";
+
 ## Optional Bonus
 
 ### Write a function called onlyCapitalLetters which accepts a string and returns a new string with only the capital letters passed to the string.
@@ -131,3 +137,5 @@ console.log(tricky);
 onlyCapitalLetters("Amazing") // "A"
 onlyCapitalLetters("nothing") // ""
 onlyCapitalLetters("EVERYTHING") // "EVERYTHING"
+```
+### Ans: See function-parameters-and-scope.html, line 130
