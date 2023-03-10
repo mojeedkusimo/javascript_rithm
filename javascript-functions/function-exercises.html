@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1> Exercise for JavaScript Functions </h1>
+    <script>
+        function difference(a, b) {
+            return a - b;
+        }
+
+        difference(2, 2); // 0
+        difference(0, 2); // -2
+
+        function product(a, b) {
+            return a * b;
+        }
+
+        product(2, 2); //  4
+        product(0, 2); // 0
+
+        function printDay(num) {
+            let day = "";
+            switch (num) {
+                case 1:
+                    day = "Sunday";
+                    break;
+                case 2:
+                    day = "Monday";
+                    break;
+                case 3:
+                    day = "Tuesday";
+                    break;
+                case 4:
+                    day = "Wednesday";
+                    break;
+                case 5:
+                    day = "Thursday";
+                    break;
+                case 6:
+                    day = "Friday";
+                    break;
+                case 7:
+                    day = "Saturday";
+                    break;
+                default:
+                    day = undefined;
+                    break;
+            }
+
+            return day;
+        }
+
+        printDay(4); // "Wednesday"
+        printDay(41); // undefined
+
+        function lastElement(array) {
+            return array.length === 0 ? undefined : array[array.length - 1];
+        }
+
+        lastElement([1, 2, 3, 4]); // 4
+        lastElement([]); // undefined
+
+        function numberCompare(a,b) {
+            
+            return a > b ? "First is greater" : a < b ? "Second is greater" : "Numbers are equal";
+        }
+
+        function singleLetterCount(word, letter) {
+            let counter = 0;
+
+            for (let i = 0; i < word.length; i++) {
+                word[i].toLowerCase() == letter.toLowerCase() ? counter++: counter+0;
+            }
+
+            return counter;
+        }
+    </script>
+</body>
+
+</html>
