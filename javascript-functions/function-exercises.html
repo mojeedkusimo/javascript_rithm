@@ -81,6 +81,21 @@
 
             return counter;
         }
+
+        function multipleLetterCount(word) {
+            let wordCount = {};
+
+            for (let i = 0; i < word.length; i++) {
+                if (word[i] in wordCount) {
+                    wordCount[word[i]]++;
+                }
+                else {
+                    wordCount[word[i]] = 1;
+                }
+            }
+
+            return wordCount;
+        }
     </script>
 </body>
 
