@@ -66,6 +66,7 @@ singleLetterCount('Rithm School','o'); // 2
 multipleLetterCount("hello"); // {h:1, e: 1, l: 2, o:1}
 multipleLetterCount("person"); // {p:1, e: 1, r: 1, s:1, o:1, n:1}
 ```
+### Ans: See function-exercises.html, line 85
 
 ### arrayManipulation
 ### this function should take in at most four parameters (an array, command, location, and value).
@@ -80,6 +81,7 @@ arrayManipulation([1,2,3], "remove", "beginning"); // 1
 arrayManipulation([1,2,3], "add", "beginning", 20); // [20,1,2,3]
 arrayManipulation([1,2,3], "add", "end", 30); // [1,2,3,30]
 ```
+### Ans: See function-exercises.html, line 100
 
 ### isPalindrome
 ### A Palindrome is a word, phrase, number, or other sequence of characters which reads the same backward or forward. This function should take in one parameter and returns true or false if it is a palindrome. As a bonus, allow your function to ignore whitespace and capitalization so that isPalindrome('a man a plan a canal Panama'); returns true
@@ -90,6 +92,7 @@ isPalindrome('tacocat'); // true
 isPalindrome('hannah'); // true
 isPalindrome('robert'); // false
 ```
+### Ans: See function-exercises.html, line 123
 
 ### Part 3
 ### Rock / Paper / Scissor
