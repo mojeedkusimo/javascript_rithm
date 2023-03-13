@@ -134,6 +134,39 @@
             return false;
 
         }
+
+        let rockPaperScissors = function () {
+            let options = ["rock", "paper", "scissors"];
+
+            let getRandomIdx = function () {
+                return Math.ceil(Math.random() * options.length - 1)
+            }
+            let computerChoice = options[getRandomIdx()];
+
+            let userChoice = prompt("Enter your choice!");
+
+            if (computerChoice === "paper" && userChoice == "rock") {
+                alert("Computer won!");
+            } else if (userChoice === "paper" && computerChoice == "rock") {
+                alert("You won!");
+            } else if (computerChoice === "scissors" && userChoice == "paper") {
+                alert("Computer won!");
+            } else if (userChoice === "scissors" && computerChoice == "paper") {
+                alert("You won!");
+            } else if (computerChoice === "scissors" && userChoice == "rock") {
+                alert("You won!");
+            } else if (userChoice === "scissors" && computerChoice == "rock") {
+                alert("Computer won!");
+            } else if (!(options.includes(userChoice))) {
+                alert("p!");
+            }
+
+            console.log(`userChoice: ${userChoice}`);
+            console.log(`computerChoice: ${computerChoice}`);
+        }
+
+        rockPaperScissors();
+
     </script>
 </body>
 
