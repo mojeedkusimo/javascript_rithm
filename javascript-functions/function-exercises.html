@@ -137,6 +137,7 @@
 
         let rockPaperScissors = function () {
             let options = ["rock", "paper", "scissors"];
+            let winner = null;
 
             let getRandomIdx = function () {
                 return Math.ceil(Math.random() * options.length - 1)
@@ -147,22 +148,31 @@
 
             if (computerChoice === "paper" && userChoice == "rock") {
                 alert("Computer won!");
+                winner = "Computer";
             } else if (userChoice === "paper" && computerChoice == "rock") {
                 alert("You won!");
+                winner = "You";
             } else if (computerChoice === "scissors" && userChoice == "paper") {
                 alert("Computer won!");
+                winner = "Computer";
             } else if (userChoice === "scissors" && computerChoice == "paper") {
                 alert("You won!");
+                winner = "You";
             } else if (computerChoice === "scissors" && userChoice == "rock") {
                 alert("You won!");
+                winner = "You";
             } else if (userChoice === "scissors" && computerChoice == "rock") {
                 alert("Computer won!");
+                winner = "Computer";
             } else if (!(options.includes(userChoice))) {
-                alert("p!");
+                alert("Please enter a valid option!");
+            } else {
+                alert("Its a tie!");
             }
 
             console.log(`userChoice: ${userChoice}`);
             console.log(`computerChoice: ${computerChoice}`);
+            console.log(`Winner: ${winner ?? "Draw"}`);
         }
 
         rockPaperScissors();
