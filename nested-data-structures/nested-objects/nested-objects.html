@@ -1,12 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <h1>Exercises for JavaScript Objects</h1>
+    <h1>Exercises for Nested Objects</h1>
+    <script>
+        let instructorData = {
+            name: "Elie",
+            additionalData: {
+                instructor: true,
+                favoriteHobbies: ["Playing Cello", "Tennis", "Coding"],
+                moreDetails: {
+                    favoriteBasketballTeam: "New York Knicks",
+                    numberOfSiblings: 3,
+                    isYoungest: true,
+                    hometown: {
+                        city: "West Orange",
+                        state: "NJ",
+                    },
+                    citiesLivedIn: ["Seattle", "Providence", "New York"]
+                }
+            }
+        };
+
+        function displayCities() {
+            let citiesLivedIn = instructorData.additionalData.moreDetails.citiesLivedIn;
+
+            citiesLivedIn.forEach((el, idx, array) => {
+                console.log(el);
+            });
+        }
+
+        displayCities();
+
+        function displayHometownData() {
+            let hometownData = instructorData.additionalData.moreDetails.hometown;
+
+            for (data in hometownData) {
+                console.log(hometownData[data]);
+            }
+        }
+
+        displayHometownData();
+
+        function addDetail(property, value) {
+            instructorData.additionalData.moreDetails[property] = value;
+
+            console.log(instructorData);
+        }
+
+        addDetail("isHilarious", true);
+        // {
+//     favoriteBasketballTeam: "New York Knicks",
+//     numberOfSiblings: 3,
+//     isYoungest: true,
+//     hometown: {
+//         city: "West Orange",
+//         state: "NJ",
+//     },
+//     citiesLivedIn: ["Seattle", "Providence", "New York"],
+//     isHilarious: true
+// }
+
+
+addDetail("previousApartments", ["Mission", "North Beach", "Nob Hill"]);
+/*
+{
+    favoriteBasketballTeam: "New York Knicks",
+    numberOfSiblings: 3,
+    isYoungest: true,
+    hometown: {
+        city: "West Orange",
+        state: "NJ",
+    },
+    citiesLivedIn: ["Seattle", "Providence", "New York"],
+    isHilarious: true
+    previousApartments: ["Mission", "North Beach", "Nob Hill"]
+}
+*/
+
+function removeDetail(property) {
+delete instructorData.additionalData.moreDetails[property];
+
+console.log(instructorData.additionalData.moreDetails);
+}
+    </script>
 </body>
+
 </html>
