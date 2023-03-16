@@ -46,6 +46,62 @@
         console.log(orderArray[1]);
 
         nestedData.innerData.addSnack("chocolate");
+
+        let nestedObject = {
+            speakers: [{ name: "Elie" }, { name: "Tim" }, { name: "Matt" }],
+            data: {
+                continents: {
+                    europe: {
+                        countries: {
+                            switzerland: {
+                                capital: "Bern",
+                                population: 8000000
+                            }
+                        }
+                    }
+                },
+                languages: {
+                    spanish: {
+                        hello: "Hola"
+                    },
+                    french: {
+                        hello: "Bonjour"
+                    }
+                }
+            }
+        }
+
+        function addSpeaker(speaker) {
+            let speakerObj = {name: speaker}
+            let speakerArray =  nestedObject.speakers;
+            speakerArray.push(speakerObj);
+
+            return speakerArray;
+        }
+
+        function addLanguage(language, helloValue) {
+            let languagesObj =  nestedObject.data.languages;
+
+            languagesObj[language]={"hello":helloValue};
+
+            return languagesObj;
+        }
+
+        function addCountry(continent, country, capital, population) {
+
+            let continentsObj = nestedObject.data.continents;
+
+            continentsObj[continent] = {
+                "countries" : {
+                    country : {
+                        "capital": capital,
+                        "population": population
+                    }
+                }
+            }
+
+            return continentsObj;
+        }
     </script>
 </body>
 
