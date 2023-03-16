@@ -1,12 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
+    <h1>Nested Objects Exercises</h1>
+    <script>
+        let nestedData = {
+            innerData: {
+                order: ["first", "second", "third"],
+                snacks: ["chips", "fruit", "crackers"],
+                numberData: {
+                    primeNumbers: [2, 3, 5, 7, 11],
+                    fibonnaci: [1, 1, 2, 3, 5, 8, 13]
+                },
+                addSnack: function (snack) {
+                    nestedData.innerData.snacks.push(snack);
+                    return nestedData.innerData.snacks;
+                }
+            }
+        }
+
+        let primeNumbersArray = nestedData.innerData.numberData.primeNumbers;
+
+        for (let i = 0; i < primeNumbersArray.length; i++) {
+
+            console.log(primeNumbersArray[i]);
+        }
+
+        let fibonnaciArray = nestedData.innerData.numberData.fibonnaci;
+
+        for (let i = 0; i < fibonnaciArray.length; i++) {
+
+            fibonnaciArray[i] % 2 ? null : console.log(fibonnaciArray[i]);
+            ;
+        }
+
+        let orderArray = nestedData.innerData.order;
+
+        console.log(orderArray[1]);
+
+        nestedData.innerData.addSnack("chocolate");
+    </script>
 </body>
+
 </html>

@@ -74,7 +74,7 @@ addDetail("previousApartments", ["Mission", "North Beach", "Nob Hill"]);
 }
 */
 ```
-### See nested-objects.html line 50
+### See nested-objects.html line 52
 
 ### Finally, let's write a function called removeDetail that removes a key in the moreDetails object and returns the moreDetails object (the new keys added above are not included in these examples).
 
@@ -108,4 +108,4 @@ removeDetail('favoriteBasketballTeam');
 */
 ```
 
-### See nested-objects.html line 50
+### See nested-objects.html line 88
