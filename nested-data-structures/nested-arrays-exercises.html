@@ -28,12 +28,24 @@
 
         }
 
-        function makeXOGrid(x, y) {
+        function makeXOGrid(subarrays, subvalues) {
 
- 
+            let XOGrid = [];
 
-            console.log(x);
+            for (let i = 0; i < subarrays; i++) {
+                let newArray = [];
+                for (let j = 0; j < subvalues; j++) {
 
+                    if ((i + j) % 2 == 0) {
+                        newArray.push("X");
+                    } else {
+                        newArray.push("O");
+                    }
+                }
+                XOGrid.push(newArray);
+            }
+
+            console.log(XOGrid);
         }
     </script>
 </body>
