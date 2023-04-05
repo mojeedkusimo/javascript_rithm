@@ -65,3 +65,100 @@ thing;
 ### Ans: ReferenceError
 ### Solution: thing should be declared outside the data function. i.e let thing;
 ```
+
+
+### Part II
+### Fix the broken code and explain what was wrong:
+
+```javascript
+1.
+
+for(let i=0; i > 5; i++){
+    console.log(i);
+}
+
+// Problem: The loop is not going to run because the boundary i > 5 will always return false and never true
+
+// Fix:
+
+for(let i=0; i < 5; i++){
+    console.log(i);
+}
+
+2.
+
+function addIfEven(num){
+    if(num % 2 = 0){
+        return num + 5;
+    }
+    return num;
+}
+
+// Poblem: The expression if(num % 2 = 0) is incorrect as it is an attempt to assign remainder of 'num' divded by 2 to zero which is syntax error (Invalid left-hand side in assignment) instead of comparing the value of 'num' divded by 2 to zero
+
+// Fix:
+
+function addIfEven(num){
+    if(num % 2 === 0){
+        return num + 5;
+    }
+    return num;
+}
+
+3.
+
+function loopToFive(){
+    for(let i=0, i < 5, i++){
+        console.log(i);
+    }
+}
+
+// Problem: This is a syntax error. A comma (,) is found in separating the conditions of looping instead of a semi-colon (;)
+
+// Fix:
+
+function loopToFive(){
+    for(let i=0; i < 5; i++){
+        console.log(i);
+    }
+}
+
+4.
+
+function displayEvenNumbers(){
+    let numbers = [1,2,3,4,5,6,7,8];
+    let evenNumbers = [];
+    for(let i=0; i<numbers.length-1; i++;){
+        if(numbers % 2 = 0); {
+            evenNumbers.push(i);
+        }
+        return evenNumbers;
+    }
+}
+displayEvenNumbers(); // should return [2,4,6,8]
+
+// HINT - eight things need to be changed here for this to work!
+// Start by fixing the syntax errors and then run the function to see what your output is.
+
+// Problem 1: There is syntax error similar to Question 2 i.e Invalid left-hand side in assignment --- if(numbers % 2 = 0)---
+// Problem 2: There is syntax error because a semi-colon (;) is put where its supposed to appear --- for(...i++;)---
+// Problem 3: It is value of the iterator --i-- that is getting pushed to evenNumbers array instead of the element at the index position 'i' which is what is intended ---evenNumbers.push(i);-----------
+// Problem 4: Only one item gets pushed to the evenNumbers array of the return statement inside the for loop block, thus the execution stops after the first iteration.
+// Problem 5: The iteraion does not get to the last element in the numbers array because of the boundary condition set in the for loop ---for(... i<numbers.length-1; ...)------
+// Problem 6: The item of comparism in the if statement is the whole numbers array instead of each element in the numbers array ---if(numbers % 2 = 0)---
+// Problem 7: There is a semi-colon (;) at the end of the if statement parenthesis ( and ) ----if(...); {----. This should not be there as the if statement operation gets terminated at that point and anything afterwards becomes a separate statement.
+
+// Fix:
+function displayEvenNumbers(){
+    let numbers = [1,2,3,4,5,6,7,8];
+    let evenNumbers = [];
+    for(let i=0; i<numbers.length; i++){
+        if(numbers[i] % 2 === 0) {
+            evenNumbers.push(numbers[i]);
+        }
+    }
+        return evenNumbers;
+}
+displayEvenNumbers(); // should return [2,4,6,8]
+
+```
