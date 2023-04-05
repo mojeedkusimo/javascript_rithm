@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Exercise for Higher Order Functions</h1>
+    <script>
+        function each(array, calback) {
+            // put your code inside here!
+            for (let i = 0; i < array.length; i++) {
+                calback(array[i]);
+            }
+
+        }
+
+        function map(array, calback) {
+            // put your code inside here!
+            let newArray = [];
+
+            for (let i = 0; i < array.length; i++) {
+                newArray.push(calback(array[i]));
+            }
+
+            return newArray;
+        }
+
+        function reject(array, calback) { // Array.filter()
+            // put your code inside here!
+            let newArray = [];
+
+            for (let i = 0; i < array.length; i++) {
+                if (!(calback(array[i]))) {
+                    newArray.push(array[i]);
+                }
+            }
+
+            return newArray;
+        }
+
+    </script>
+</body>
+
+</html>
