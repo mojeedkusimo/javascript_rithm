@@ -1,43 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
+
 <body>
-    <h1>Exercise for Higher Order Functions, Timers, Closures</h1>
-<script>
+  <h1>Exercise for Higher Order Functions, Timers, Closures</h1>
+  <script>
 
-function countDown(num){
-  let timeChecker = setInterval(function(){
-    num--;
-    if(num < 1){
-        console.log('DONE!');
-      clearInterval(timeChecker);
+    function countDown(num) {
+      let timeChecker = setInterval(function () {
+        num--;
+        if (num < 1) {
+          console.log('DONE!');
+          clearInterval(timeChecker);
+        }
+        else {
+          console.log(num);
+        }
+
+      }, 1000);
     }
-    else {
-      console.log(num);
+
+
+    function randomGame() {
+      let counter = 0;
+      let randomCheck = setInterval(function () {
+        if (Math.random() > 0.75) {
+          console.log(counter);
+          clearInterval(randomCheck);
+        } else {
+          counter++;
+        }
+
+      }, 1000);
     }
 
-  },1000);
-}
-
-
-function randomGame() {
-    let counter = 0;
-    let randomCheck = setInterval(function() {
-    if (Math.random() > 0.75) {
-        console.log(counter);
-        clearInterval(randomCheck);
-    } else {
-        counter++;
+    function isEven(num) {
+      if (num % 2 == 0) {
+        return true;
+      }
+      return false;
     }
-        
-    }, 1000);
-}
 
-</script>
+    function isOdd(num) {
+      if (num % 2 == 0) {
+        return false;
+      }
+      return true;
+    }
+
+    function isPrime(num) {
+
+      for (let i = 2; i < num; i++) {
+
+        if (num % i == 0) {
+          return false;
+        }
+      }
+      return true;
+    }
+
+
+    function numberFact(num, callback) {
+
+      return callback(num);
+    }
+
+    function find(array, callback) {
+
+      for (let i = 0; i < array.length; i++) {
+        if (callback(array[i])) {
+          return array[i];
+        }
+      }
+      return undefined;
+    }
+
+    function findIndex(array, callback) {
+
+      for (let i = 0; i < array.length; i++) {
+        if (callback(array[i])) {
+          return i;
+        }
+      }
+      return undefined;
+    }
+
+
+    function specialMultiply() {
+
+      let numbersPassed = arguments;
+
+      let firstValue = numbersPassed[0];
+
+      if (numbersPassed.length > 1) {
+        let multiplication = 1;
+
+          for (let i = 0; i < numbersPassed.length; i++) {
+            multiplication *= numbersPassed[i];
+          }
+
+          return multiplication;
+      } else {
+        return function multiplyer(params) {
+          for (let i = 0; i < numbersPassed.length; i++) {
+            params *= numbersPassed[i];
+          }
+
+          return params;
+        }
+
+      }
+    }
+  </script>
 </body>
+
 </html>
