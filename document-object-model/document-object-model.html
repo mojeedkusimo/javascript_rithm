@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<body>
 <div class="header">
 </div>
 <section id="container">
@@ -21,10 +22,9 @@
         <li class="third">three</li>
     </ol>
 </section>
-<div class="footer">
+<div class="footer">I am here
 </div>
 
-<body>
     <h1>Exercise for Document Object Model</h1>
     <script>
 
@@ -33,7 +33,30 @@
         let mainSectionquerySelector = document.querySelector("#container");
 
         let secondLI = document.querySelectorAll(".second");
-        let thirdLI = document.querySelectorAll("li.third");
+        let thirdLI = document.querySelectorAll("ol>li.third");
+
+        // mainSectiongetElement.innerText = "Hello!"
+
+        let footerDiv = document.querySelector(".footer");
+        let allFooterDiv = document.querySelectorAll(".footer");
+
+        footerDiv.classList.add("main");
+        footerDiv.classList.remove("main");
+
+        let newLi = document.createElement("li");
+        newLi.innerText = "four";
+
+        let ulList = document.querySelector("ul");
+        ulList.append(newLi);
+
+        let olLI = document.querySelectorAll("ol>li");
+        olLI.forEach((el, ind, list) => {
+            el.style.backgroundColor = "green";
+        });
+
+        let body = document.querySelector("body");
+        footerDiv.remove(); // method 1
+        // body.removeChild(footerDiv); method 2
 
     </script>
 </body>
