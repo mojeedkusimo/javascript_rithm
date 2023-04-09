@@ -1,5 +1,6 @@
 ### Given the following HTML, create a script.js file to complete the first two parts.
 
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,6 +56,7 @@
     <script src="script.js"></script>
 </body>
 </html>
+```
 
 ### Part 1
 ### Add the necessary code to wait for the DOM to load to make sure that anything you manipulate in the DOM has loaded. You can do this either using window.onload or adding an event listener for DOMContentLoaded.
