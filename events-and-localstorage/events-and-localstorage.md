@@ -1,4 +1,4 @@
-Given the following HTML, create a script.js file to complete the first two parts.
+### Given the following HTML, create a script.js file to complete the first two parts.
 
 <!DOCTYPE html>
 <html lang="en">
@@ -55,30 +55,32 @@ Given the following HTML, create a script.js file to complete the first two part
     <script src="script.js"></script>
 </body>
 </html>
-Part 1
-Add the necessary code to wait for the DOM to load to make sure that anything you manipulate in the DOM has loaded. You can do this either using window.onload or adding an event listener for DOMContentLoaded.
 
-Replace the text "Change me" with "Hello World!".
+### Part 1
+### Add the necessary code to wait for the DOM to load to make sure that anything you manipulate in the DOM has loaded. You can do this either using window.onload or adding an event listener for DOMContentLoaded.
 
-When a user hovers over one of the colored boxes change the text to display the color that is being hovered over.
+### Replace the text "Change me" with "Hello World!".
 
-Create a new div element.
+### When a user hovers over one of the colored boxes change the text to display the color that is being hovered over.
 
-Give your new div a class of purple and style it so that it has a background color of purple.
+### Create a new div element.
 
-Append your new div to the page to the section tag.
+### Give your new div a class of purple and style it so that it has a background color of purple.
 
-Part 2
-Create a racing game with the two cars. When the race button is pressed, the two cars should move across the screen until one of them is at the end of the screen. When one of the blocks reaches the end - you should alert "winner!"
+### Append your new div to the page to the section tag.
 
-Part 3
-For this assignment you will be combining your knowledge of DOM access and events to build a todo app!
+### Part 2
+### Create a racing game with the two cars. When the race button is pressed, the two cars should move across the screen until one of them is at the end of the screen. When one of the blocks reaches the end - you should alert "winner!"
 
-As a user, you should be able to:
+### Part 3
+### For this assignment you will be combining your knowledge of DOM access and events to build a todo app!
 
-Add a new todo (by submitting a form)
-Mark a todo as completed (cross out the text of the todo)
-Remove a todo
-Part 4:
-Using localStorage, try to store your todos so that if you refresh the page you do not lose what you have added to the list! As a super bonus, try to also save todos that you have marked as complete!
+### As a user, you should be able to:
+
+### Add a new todo (by submitting a form)
+### Mark a todo as completed (cross out the text of the todo)
+### Remove a todo
+
+### Part 4:
+### Using localStorage, try to store your todos so that if you refresh the page you do not lose what you have added to the list! As a super bonus, try to also save todos that you have marked as complete!
 
