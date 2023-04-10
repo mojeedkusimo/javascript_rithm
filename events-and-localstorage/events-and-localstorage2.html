@@ -45,6 +45,7 @@
         });
 
         function addTodo(todo) {
+            let latestPendingTodos= [];
             let newTodo = document.createElement("li");
             let completeTodoButton = document.createElement("button");
             let removeTodoButton = document.createElement("button");
@@ -67,6 +68,13 @@
             newTodo.append(removeTodoButton);
             newPendingList.append(newTodo);
             pendingTodoSect.append(newPendingList);
+
+            for (let i = 0; i < newPendingList['children'].length; i++) {
+
+                latestPendingTodos.push(newPendingList['children'][i]['firstChild']['data']);
+            }
+            storePendingTodo(todo);
+            console.log(latestPendingTodos);
         }
 
         function removeTodo(todo) {
@@ -79,7 +87,45 @@
             newTodo.innerText = todo.target.parentElement.firstChild.data;
             newCompletedList.append(newTodo);
             completedTodoSect.append(newCompletedList);
+            storeCompletedTodo(todo);
         }
+
+        function storePendingTodo(todo) {
+
+            if (localStorage.getItem("todos") == null) {
+                let todoList = {
+                    pendingTodos: [],
+                    completedTodos: [],
+                };
+                todoList["pendingTodos"].push(todo);
+                localStorage.setItem("todos", JSON.stringify(todoList));
+                // console.log(JSON.parse(localStorage.getItem("todos")));
+
+            } else {
+
+                let existingTodoList = JSON.parse(localStorage.getItem("todos"));
+                existingTodoList["pendingTodos"].push(todo);
+                localStorage.setItem("todos", JSON.stringify(existingTodoList));
+                // console.log(JSON.parse(localStorage.getItem("todos")));
+            }
+        }
+
+        function storeCompletedTodo(todo) {
+            let todoList = [];
+            if (localStorage.getItem("todos") == null) {
+                todoList.push(todo);
+                localStorage.setItem("todos", JSON.stringify(todoList));
+                // console.log(JSON.parse(localStorage.getItem("todos")));
+
+            } else {
+
+                let existingTodoList = JSON.parse(localStorage.getItem("todos"));
+                existingTodoList.push(todo);
+                localStorage.setItem("todos", JSON.stringify(existingTodoList));
+                // console.log(JSON.parse(localStorage.getItem("todos")));
+            }
+        }
+        localStorage.clear();
     </script>
 </body>
 

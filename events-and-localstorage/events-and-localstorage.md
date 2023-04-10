@@ -89,6 +89,7 @@
 ### Add a new todo (by submitting a form)
 ### Mark a todo as completed (cross out the text of the todo)
 ### Remove a todo
+### Ans: See events-and-localstorage2.html
 
 ### Part 4:
 ### Using localStorage, try to store your todos so that if you refresh the page you do not lose what you have added to the list! As a super bonus, try to also save todos that you have marked as complete!
