@@ -79,49 +79,57 @@
     let carTwo = document.querySelector(".car2");
     let button = document.querySelector("button");
 
-    function startRace(carOneSpeed, carTwoSpeed) {
-      console.log("....race started!");
-
-      let carOneNewSpeed = 0;
-      let carTwoNewSpeed = 0;
-      let innerWindowWidth = window.innerWidth;
-
-      let carOneTimer = setInterval(() => {
-        carOneNewSpeed += carOneSpeed;
-        carOne.style.marginLeft = `${carOneNewSpeed}px`;
-
-        if (carOneNewSpeed >= (innerWindowWidth - 80)) {
-          clearInterval(carOneTimer);
-          clearInterval(carTwoTimer);
-          alert("Car One is the winner!");
-          console.log("....race ended!");
-        }
-      }, 1000);
-
-      let carTwoTimer = setInterval(() => {
-        carTwoNewSpeed += carTwoSpeed;
-        carTwo.style.marginLeft = `${carTwoNewSpeed}px`;
-
-        if (carTwoNewSpeed >= (innerWindowWidth - 80)) {
-          clearInterval(carOneTimer);
-          clearInterval(carTwoTimer);
-          alert("Car Two is the winner!");
-          console.log("....race ended!");
-        }
-      }, 1000);
-    }
-
     window.onload(
       titleText.innerHTML = "Hello World!",
       section.addEventListener("mouseover", (e) => {
         let overItem = e.target.classList.item(0);
         selectedSpan.innerText = overItem;
       }),
+      newDiv.classList.add("purple"),
       section.append(newDiv),
       button.addEventListener("click", (e) => {
-        startRace(105, 55);
+        startRace(10, 35);
       })
     );
+
+    function startRace(carOneSpeed, carTwoSpeed) {
+      console.log("....race started!");
+
+      let range = [10,20,30,40,50,60];
+      let carOneNewSpeed = 0;
+      let carTwoNewSpeed = 0;
+      let innerWindowWidth = window.innerWidth;
+
+      let carOneTimer = setInterval(() => {
+        let carOneSpeed = Math.random() * range[Math.floor(Math.random()*range.length)];
+        carOneNewSpeed += carOneSpeed;
+        carOne.style.marginLeft = `${carOneNewSpeed}px`;
+
+        if (carOneNewSpeed >= (innerWindowWidth - 40)) {
+          clearInterval(carOneTimer);
+          clearInterval(carTwoTimer);
+          alert("Car One is the winner!");
+          carOne.style.marginLeft = `0px`;
+          carTwo.style.marginLeft = `0px`;
+          console.log("....race ended!");
+        }
+      }, 1000);
+
+      let carTwoTimer = setInterval(() => {
+        let carTwoSpeed = Math.random() * range[Math.floor(Math.random()*range.length)];
+        carTwoNewSpeed += carTwoSpeed;
+        carTwo.style.marginLeft = `${carTwoNewSpeed}px`;
+
+        if (carTwoNewSpeed >= (innerWindowWidth - 40)) {
+          clearInterval(carOneTimer);
+          clearInterval(carTwoTimer);
+          alert("Car Two is the winner!");
+          carOne.style.marginLeft = `0px`;
+          carTwo.style.marginLeft = `0px`;
+          console.log("....race ended!");
+        }
+      }, 1000);
+    }
   </script>
 </body>
 

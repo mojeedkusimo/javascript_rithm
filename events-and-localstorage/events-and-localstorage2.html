@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .completed-todo {
+        margin-left: 50px;
+    }
+</style>
+
+<body>
+    <h1>To - Do Application</h1>
+    <section id="todo-section">
+        <form action="" id="todo-form">
+            <textarea id="todo-text" cols="30" rows="5"></textarea>
+            <button id="add-todo" type="submit">Add</button>
+        </form>
+    </section>
+
+    <section id="pending-todo-list">
+        <h1>Pending Todos</h1>
+    </section>
+
+    <section id="completed-todo-list">
+        <h1>Completed Todos</h1>
+    </section>
+
+    <script>
+        let todoText = document.querySelector("textarea");
+        let form = document.querySelector("form");
+        let newPendingList = document.createElement("ol");
+        let newCompletedList = document.createElement("ol");
+        let pendingTodoSect = document.querySelector("section#pending-todo-list");
+        let completedTodoSect = document.querySelector("section#completed-todo-list");
+
+
+        form.addEventListener("submit", function checkForm(e) {
+            e.preventDefault();
+            addTodo(todoText.value);
+        });
+
+        function addTodo(todo) {
+            let newTodo = document.createElement("li");
+            let completeTodoButton = document.createElement("button");
+            let removeTodoButton = document.createElement("button");
+            completeTodoButton.innerText = "Completed";
+            removeTodoButton.innerText = "Remove";
+            completeTodoButton.classList.add("completed-todo");
+
+            removeTodoButton.addEventListener("click", function (e) {
+                    removeTodo(e);
+
+            });
+
+            completeTodoButton.addEventListener("click", function (e) {
+                    completeTodo(e);
+
+            });
+
+            newTodo.innerText = todo;
+            newTodo.append(completeTodoButton);
+            newTodo.append(removeTodoButton);
+            newPendingList.append(newTodo);
+            pendingTodoSect.append(newPendingList);
+        }
+
+        function removeTodo(todo) {
+                todo.target.parentElement.remove();
+        }
+
+        function completeTodo(todo) {
+            removeTodo(todo);
+            let newTodo = document.createElement("li");
+            newTodo.innerText = todo.target.parentElement.firstChild.data;
+            newCompletedList.append(newTodo);
+            completedTodoSect.append(newCompletedList);
+        }
+    </script>
+</body>
+
+</html>

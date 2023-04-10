@@ -60,19 +60,26 @@
 
 ### Part 1
 ### Add the necessary code to wait for the DOM to load to make sure that anything you manipulate in the DOM has loaded. You can do this either using window.onload or adding an event listener for DOMContentLoaded.
+### Ans: See events-and-localstorage1.html, line 82
 
 ### Replace the text "Change me" with "Hello World!".
+### Ans: See events-and-localstorage1.html, line 83
 
 ### When a user hovers over one of the colored boxes change the text to display the color that is being hovered over.
+### Ans: See events-and-localstorage1.html, line 84
 
 ### Create a new div element.
+### Ans: See events-and-localstorage1.html, line 76
 
 ### Give your new div a class of purple and style it so that it has a background color of purple.
+### Ans: See events-and-localstorage1.html, line 88
 
 ### Append your new div to the page to the section tag.
+### Ans: See events-and-localstorage1.html, line 89
 
 ### Part 2
 ### Create a racing game with the two cars. When the race button is pressed, the two cars should move across the screen until one of them is at the end of the screen. When one of the blocks reaches the end - you should alert "winner!"
+### Ans: See events-and-localstorage1.html, line 95
 
 ### Part 3
 ### For this assignment you will be combining your knowledge of DOM access and events to build a todo app!
