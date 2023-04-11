@@ -45,7 +45,8 @@
         });
 
         function addTodo(todo) {
-            let latestPendingTodos= [];
+            let latestPendingTodos = [];
+            let latestCompletedTodos = [];
             let newTodo = document.createElement("li");
             let completeTodoButton = document.createElement("button");
             let removeTodoButton = document.createElement("button");
@@ -54,12 +55,12 @@
             completeTodoButton.classList.add("completed-todo");
 
             removeTodoButton.addEventListener("click", function (e) {
-                    removeTodo(e);
+                removeTodo(e);
 
             });
 
             completeTodoButton.addEventListener("click", function (e) {
-                    completeTodo(e);
+                completeTodo(e);
 
             });
 
@@ -75,10 +76,17 @@
             }
             storePendingTodo(todo);
             console.log(latestPendingTodos);
+
+            for (let i = 0; i < newCompletedList['children'].length; i++) {
+
+                latestCompletedTodos.push(newCompletedList['children'][i]['firstChild']['data']);
+            }
+            // storePendingTodo(todo);
+            console.log(latestCompletedTodos);
         }
 
         function removeTodo(todo) {
-                todo.target.parentElement.remove();
+            todo.target.parentElement.remove();
         }
 
         function completeTodo(todo) {
@@ -87,7 +95,9 @@
             newTodo.innerText = todo.target.parentElement.firstChild.data;
             newCompletedList.append(newTodo);
             completedTodoSect.append(newCompletedList);
-            storeCompletedTodo(todo);
+            let latestPendingTodos = [];
+            storeCompletedTodo(todo.target.parentElement.firstChild.data);
+
         }
 
         function storePendingTodo(todo) {
@@ -99,30 +109,34 @@
                 };
                 todoList["pendingTodos"].push(todo);
                 localStorage.setItem("todos", JSON.stringify(todoList));
-                // console.log(JSON.parse(localStorage.getItem("todos")));
+                console.log(JSON.parse(localStorage.getItem("todos")));
 
             } else {
 
                 let existingTodoList = JSON.parse(localStorage.getItem("todos"));
                 existingTodoList["pendingTodos"].push(todo);
                 localStorage.setItem("todos", JSON.stringify(existingTodoList));
-                // console.log(JSON.parse(localStorage.getItem("todos")));
+                console.log(JSON.parse(localStorage.getItem("todos")));
             }
         }
 
         function storeCompletedTodo(todo) {
             let todoList = [];
             if (localStorage.getItem("todos") == null) {
-                todoList.push(todo);
+                let todoList = {
+                    pendingTodos: [],
+                    completedTodos: [],
+                };
+                todoList["completedTodos"].push(todo);
                 localStorage.setItem("todos", JSON.stringify(todoList));
-                // console.log(JSON.parse(localStorage.getItem("todos")));
+                console.log(JSON.parse(localStorage.getItem("todos")));
 
             } else {
 
                 let existingTodoList = JSON.parse(localStorage.getItem("todos"));
-                existingTodoList.push(todo);
+                existingTodoList["completedTodos"].push(todo);
                 localStorage.setItem("todos", JSON.stringify(existingTodoList));
-                // console.log(JSON.parse(localStorage.getItem("todos")));
+                console.log(JSON.parse(localStorage.getItem("todos")));
             }
         }
         localStorage.clear();
