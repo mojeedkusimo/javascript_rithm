@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise for Reduce</title>
+</head>
+
+<body>
+    <script>
+
+        function extractKey(array, key) {
+
+            arr2.reduce((acc, el) => {
+                acc.push(el[key]);
+                return acc;
+            }, []);
+        }
+
+        function filterLetters(array, char) {
+
+            return array.reduce((acc, el) => {
+                if (el.toLowerCase() == char.toLowerCase()) {
+                    acc++
+
+                }
+                return acc;
+            }, 0);
+        }
+
+        function addKeyAndValue(array, key, value) {
+
+            return array.reduce((acc, el) => {
+                let obj = {
+                    name: el['name'],
+                    [key]: value
+                }
+                acc.push(obj);
+                return acc;
+            }, []);
+        }
+    </script>
+</body>
+
+</html>
