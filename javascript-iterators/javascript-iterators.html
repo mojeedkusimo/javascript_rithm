@@ -81,6 +81,29 @@
 
             });
         }
+
+        function listNames() {
+            songs.forEach((el) => {
+                console.log(el.name);
+            });
+        }
+
+        function listSongDetails() {
+            songs.forEach((el) => {
+                console.log(`${el.name}, by ${el.artist} (${el.duration})`);
+            });
+        }
+
+        function summerJamCount() {
+            let count = 0
+            songs.forEach((el) => {
+                if (el.month >= 6 && el.month <= 8) {
+                    count++;
+                }
+            });
+
+            return count;
+        }
     </script>
 </body>
 
