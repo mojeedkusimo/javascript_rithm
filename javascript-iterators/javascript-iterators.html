@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise for Iterators</title>
+</head>
+
+<body>
+    <script>
+
+        let users = [
+            {
+                username: 'larry',
+                email: 'larry@foo.com',
+                yearsExperience: 22.1,
+                favoriteLanguages: ['Perl', 'Java', 'C++'],
+                favoriteEditor: 'Vim',
+                hobbies: ['Fishing', 'Sailing', 'Hiking'],
+                hometown: {
+                    city: 'San Francisco',
+                    state: 'CA'
+                }
+            },
+            {
+                username: 'jane',
+                email: 'jane@test.com',
+                yearsExperience: 33.9,
+                favoriteLanguages: ['Haskell', 'Clojure', 'PHP'],
+                favoriteEditor: 'Emacs',
+                hobbies: ['Swimming', 'Biking', 'Hiking'],
+                hometown: {
+                    city: 'New York',
+                    state: 'NY'
+                }
+            },
+            {
+                username: 'sam',
+                email: 'sam@test.com',
+                yearsExperience: 8.2,
+                favoriteLanguages: ['JavaScript', 'Ruby', 'Python', 'Go'],
+                favoriteEditor: 'Atom',
+                hobbies: ['Golf', 'Cooking', 'Archery'],
+                hometown: {
+                    city: 'Fargo',
+                    state: 'SD'
+                }
+            },
+            {
+                username: 'anne',
+                email: 'anne@test.com',
+                yearsExperience: 4,
+                favoriteLanguages: ['C#', 'C++', 'F#'],
+                favoriteEditor: 'Visual Studio Code',
+                hobbies: ['Tennis', 'Biking', 'Archery'],
+                hometown: {
+                    city: 'Albany',
+                    state: 'NY'
+                }
+            },
+            {
+                username: 'david',
+                email: 'david@test.com',
+                yearsExperience: 12.5,
+                favoriteLanguages: ['JavaScript', 'C#', 'Swift'],
+                favoriteEditor: 'VS Code',
+                hobbies: ['Volunteering', 'Biking', 'Coding'],
+                hometown: {
+                    city: 'Los Angeles',
+                    state: 'CA'
+                }
+            }
+        ];
+
+        function printEmails() {
+
+            users.forEach((el) => {
+                console.log(el['email']);
+
+            });
+        }
+    </script>
+</body>
+
+</html>
