@@ -19,3 +19,23 @@ describe("replaceWith", function () {
       });
   
   })
+
+
+  describe("expand", function () {
+
+    it("returns_an_array", function () {
+        expect(Array.isArray(expand([1,2,3],3))).toBe(true);
+        expect(Array.isArray(expand(["foo", "test"],1))).toBe(true);
+    });
+
+    it("returns_an_array_with_elements_repeated_based_on_count_inputted", function () {
+      expect(expand([1,2,3],3)).toEqual([1,2,3,1,2,3,1,2,3]);
+      expect(expand(["foo", "test"],1)).toEqual(["foo","test"]);
+    });
+
+    it("returns_an_array_with_elements_of_thesame_data_type", function () {
+      expect(typeof expand([1,2,3],3)[0]).toEqual(typeof [1,2,3][0]);
+      expect(typeof expand(["foo", "test"],1)[0]).toEqual(typeof ["foo","test"][0]);
+    });
+  
+  })
