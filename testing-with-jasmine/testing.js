@@ -40,9 +40,12 @@ function acceptNumbersOnly(){
 
 }
 
-function mergeArrays(){
+function mergeArrays(arr1,arr2){
 
+    function compareNumbers(a, b) {
+        return a - b;
+      }
 
-    return [];
+    return arr1.concat(arr2).sort(compareNumbers);
 
 }
