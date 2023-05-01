@@ -27,3 +27,22 @@ function expand(array, count){
     return newArray;
 
 }
+
+function acceptNumbersOnly(){
+
+    for (let i = 0; i < arguments.length; i++) {
+        if (typeof arguments[i] != "number" || `${arguments[i]}` === "NaN") {
+            return false;
+        }
+    }
+
+    return true;
+
+}
+
+function mergeArrays(){
+
+
+    return [];
+
+}

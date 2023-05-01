@@ -39,3 +39,44 @@ describe("replaceWith", function () {
     });
   
   })
+
+
+  describe("acceptNumbersOnly", function () {
+
+    it("returns_a_boolean", function () {
+        expect(typeof acceptNumbersOnly(1,"foo")).toBe("boolean");
+        expect(typeof acceptNumbersOnly(1,2,3,4,5,6,7)).toBe("boolean");
+        expect(typeof acceptNumbersOnly(1,2,3,4,5,6,NaN)).toBe("boolean");
+    });
+
+    it("returns_true_if_all_arguments_are_of_type_number_or_otherwise_false", function () {
+      expect(acceptNumbersOnly(1,"foo")).toBe(false);
+      expect(acceptNumbersOnly(1,2,3,4,5,6,7)).toBe(true);
+      expect(acceptNumbersOnly(1,2,3,4,5,6,[])).toBe(false);
+      expect(acceptNumbersOnly(1,2,3,{})).toBe(false);
+    });
+
+    it("returns_false_if_arguments_include_NaN", function () {
+      expect(acceptNumbersOnly(1,2,3,NaN)).toBe(false);
+      expect(acceptNumbersOnly(1,2,3,4,5,6,7,8,9,NaN)).toBe(false);
+      expect(acceptNumbersOnly(NaN)).toBe(false);
+    });
+  
+  })
+
+
+  describe("mergeArrays", function () {
+
+    it("returns_an_array", function () {
+      expect(Array.isArray(mergeArrays([2,1],[3,4]))).toBe(true);
+  });
+
+    it("returns_a_sorted_array", function () {
+      expect(mergeArrays([2,1],[3,4])).toEqual([1,2,3,4]);
+    });
+
+    it("returns_an_array_of_length_equal_to_sum_of_length_of_individual_arrays_passed", function () {
+      expect(mergeArrays([2,1],[3,4]).length).toEqual(4);
+    });
+  
+  })
