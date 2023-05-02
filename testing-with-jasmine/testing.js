@@ -1,4 +1,4 @@
-function replaceWith(str, oldChar, newChar){
+function replaceWith(str, oldChar, newChar) {
 
     let newStr = "";
 
@@ -12,7 +12,7 @@ function replaceWith(str, oldChar, newChar){
     return newStr;
 }
 
-function expand(array, count){
+function expand(array, count) {
 
     let newArray = [];
 
@@ -28,7 +28,7 @@ function expand(array, count){
 
 }
 
-function acceptNumbersOnly(){
+function acceptNumbersOnly() {
 
     for (let i = 0; i < arguments.length; i++) {
         if (typeof arguments[i] != "number" || `${arguments[i]}` === "NaN") {
@@ -40,12 +40,29 @@ function acceptNumbersOnly(){
 
 }
 
-function mergeArrays(arr1,arr2){
+function mergeArrays(arr1, arr2) {
 
     function compareNumbers(a, b) {
         return a - b;
-      }
+    }
 
     return arr1.concat(arr2).sort(compareNumbers);
+
+}
+
+
+function mergeObjects(obj1, obj2) {
+
+    let newObj = {};
+
+    for (key in obj1) {
+        newObj[key] = obj1[key];
+    }
+
+    for (key in obj2) {
+        newObj[key] = obj2[key];
+    }
+
+    return newObj;
 
 }
