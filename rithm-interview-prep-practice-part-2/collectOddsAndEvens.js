@@ -6,12 +6,12 @@ function collectOddsAndEvens(array) {
     even: 0
   }
 
-  for (let i = 0; i < array.length; i) {
+  for (let i = 0; i < array.length; i++) {
 
     if (array[i] % 2 == 0) {
-      container.even++
+      container.even++;
     } else {
-      container.odd++
+      container.odd++;
     }
     
   }
@@ -19,5 +19,4 @@ function collectOddsAndEvens(array) {
   return container;
 
 }
-
 
