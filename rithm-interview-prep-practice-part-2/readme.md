@@ -132,8 +132,8 @@ let obj = {
 };
 countIfHasValue(obj, 1) // 2
 countIfHasValue(obj, 7) // 3
-countIfHasValue(obj, 10 // 1
-countIfHasValue(obj, 13 // 0
+countIfHasValue(obj, 10) // 1
+countIfHasValue(obj, 13) // 0
 ```
 
 ### countValidNumsInString
