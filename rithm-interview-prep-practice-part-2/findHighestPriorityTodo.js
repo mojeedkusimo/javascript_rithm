@@ -14,8 +14,7 @@ function findHighestPriorityTodo(array) {
     }
   }
 
-  priorityAr.push(topTask);
-  priorityAr.push(topPriority);
+  priorityAr.push(topTask, topPriority);
 
   return priorityAr;
 }
