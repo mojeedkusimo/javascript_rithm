@@ -367,7 +367,7 @@ separateLanguages(["python", "python", "python", "javascript", "c++"])
   other: ["c++"],
 }
 */
-  })
+
 separateLanguages(["python", "python", "spanish", "javascript"])
 /*
   python: 2,
