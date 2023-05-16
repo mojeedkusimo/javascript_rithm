@@ -4,12 +4,13 @@ function findFirstAndLastIndex(array, num) {
   let occurenceArray = [];
 
   for (let i = 0; i < array.length; i++) {
-
-    if (array[i] == num && occurenceArray.length < 3) {
-
-      occurenceArray.push(i);
-    } else {
-      occurenceArray[1] = i;
+    if (array[i] == num) {
+      if (occurenceArray.length < 1) {
+        occurenceArray.push(i);
+      }
+      else {
+        occurenceArray[1] = i;
+      }
     }
 
   }
@@ -20,4 +21,3 @@ function findFirstAndLastIndex(array, num) {
 
   return occurenceArray;
 }
-
