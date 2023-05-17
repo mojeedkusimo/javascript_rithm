@@ -17,6 +17,8 @@ function logThis(){
 logThis(); // ?
 ```
 ### What does this function output? Why?
+### Ans: window object
+### Why: Same as above
 
 ```js
 var instructor = {
@@ -29,6 +31,8 @@ var instructor = {
 instructor.sayHi() // ?
 ```
 ### What does this function output? Why?
+### Ans: Hello! Tim
+### Why: This has to deal with the second rule, i.e. the value of the this keyword in a declared object is the closest parent object.
 
 ```js
 var instructor = {
@@ -45,6 +49,8 @@ var instructor = {
 instructor.displayInfo() // ?
 ```
 ### What does this function output? Why?
+### Ans: Cat owner? undefined
+### Why: Same as above
 
 ```js
 var instructor = {
@@ -65,6 +71,9 @@ instructor.info.displayLocation() // ?
 ```
 
 ### What does this function output? Why?
+### Ans: Oakland
+### Why: Same as above
+
 ```js
 var instructor = {
     firstName: 'Tim',
