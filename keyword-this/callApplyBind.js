@@ -11,3 +11,15 @@ function sumEvenArguments() {
 
     return sum;
 }
+
+function arrayFrom(array) {
+
+    let realArr = [];
+
+    for (let i = 0; i < array.length; i++) {
+        realArr.push(array[i]);
+    }
+
+    return realArr;
+
+}
