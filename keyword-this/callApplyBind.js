@@ -23,3 +23,18 @@ function arrayFrom(array) {
     return realArr;
 
 }
+
+function invokeMax(func, num) {
+
+    let counter = 0;
+
+    return function () {
+        counter++;
+
+        if (counter > num) {
+            return "Maxed Out!";
+        }
+        
+        return func;
+    }
+}
