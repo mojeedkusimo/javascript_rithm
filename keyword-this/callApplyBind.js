@@ -38,3 +38,24 @@ function invokeMax(func, num) {
         return func;
     }
 }
+
+function guessingGame(amount) {
+
+    let anwser = Math.random() * 10;
+
+    let guesses = 0;
+
+    return function (guess) {
+
+        if (guesses > amount) {
+            return "You are all done playing!";
+        } else if (guess > anwser) {
+            return "You're too high!";
+        } else if (guess > anwser) {
+            return "You're too low!";
+        }
+
+        guesses++;
+    }
+
+}
